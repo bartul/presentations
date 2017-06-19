@@ -23,12 +23,3 @@ const newDb2 = L.set(['classes', 0, 'level'], 'Introduction', db)
 L.get(first, newDb2); //*?*/
 
 
-
-
-
-
-
-
-
-// storiesOf('Lenses', module)
-//     .add('Initial', () => <TextInput value={Atom('Hi!')} />);
