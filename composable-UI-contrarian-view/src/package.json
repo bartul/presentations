@@ -17,6 +17,7 @@
     "babel-preset-react": "^6.24.1",
     "karet.util": "^0.13.0",
     "kefir.atom": "^5.3.4",
+    "partial.lenses": "^11.9.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
