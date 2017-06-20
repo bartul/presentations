@@ -25,5 +25,17 @@ const ListOfItems = ({names}) =>
         </ul>
     </div>;
 
+const InputAdd = ({elements = Atom([]), entry = Atom('')}) =>
+    <div>
+        <div>
+            <TextInput value={entry} />
+            <button onClick={() => {if(entry.get().trim()) { elements.modify(R.append(entry.get())); entry.set(''); }}}>Add data</button>
+        </div>
+        <ul>
+            {U.mapCached(i => <li key={i}>{elements.view(i)}</li>, U.indices(elements))}
+        </ul>
+    </div>
+
 storiesOf('Lenses', module)
-    .add('List of Items', () => <ListOfItems names={names} /> );
+    .add('List of Items', () => <ListOfItems names={names} /> )
+    .add('Add Input', () => <InputAdd elements={names} /> );
